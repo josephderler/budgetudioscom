@@ -7,6 +7,7 @@ const links = [
   { label: "Gameplay", href: "/#gameplay" },
   { label: "Video", href: "/#video" },
   { label: "About", href: "/#about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -43,15 +44,25 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className="text-sm font-bold text-dora-purple-deep/70 transition-colors hover:text-dora-pink"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.href.includes("#") ? (
+              <a
+                key={l.label}
+                href={l.href}
+                className="text-sm font-bold text-dora-purple-deep/70 transition-colors hover:text-dora-pink"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.label}
+                to={l.href}
+                className="text-sm font-bold text-dora-purple-deep/70 transition-colors hover:text-dora-pink"
+              >
+                {l.label}
+              </Link>
+            )
+          )}
         </div>
 
         <div className="hidden md:block">
@@ -87,16 +98,27 @@ export default function Navbar() {
       {open && (
         <div className="mx-4 mb-3 rounded-2xl bg-white/95 p-4 shadow-xl shadow-dora-purple/10 backdrop-blur md:hidden">
           <div className="flex flex-col gap-1">
-            {links.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-2.5 text-sm font-bold text-dora-purple-deep/80 hover:bg-dora-cream"
-              >
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) =>
+              l.href.includes("#") ? (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-xl px-3 py-2.5 text-sm font-bold text-dora-purple-deep/80 hover:bg-dora-cream"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  key={l.label}
+                  to={l.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-xl px-3 py-2.5 text-sm font-bold text-dora-purple-deep/80 hover:bg-dora-cream"
+                >
+                  {l.label}
+                </Link>
+              )
+            )}
             <a
               href={site.stores.appStore}
               target="_blank"

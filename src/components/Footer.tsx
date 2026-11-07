@@ -83,6 +83,9 @@ export default function Footer() {
             Made with 💜 for little explorers everywhere.
           </p>
           <div className="flex items-center gap-5">
+            <Link className="hover:text-white" to="/contact">
+              Contact
+            </Link>
             <Link className="hover:text-white" to="/privacy">
               Privacy Policy
             </Link>
