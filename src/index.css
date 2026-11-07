@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+
+  --color-dora-purple: #6d28d9;
+  --color-dora-purple-deep: #4c1d95;
+  --color-dora-violet: #8b5cf6;
+  --color-dora-pink: #ec4899;
+  --color-dora-magenta: #d946ef;
+  --color-dora-sky: #38bdf8;
+  --color-dora-blue: #2563eb;
+  --color-dora-yellow: #fbbf24;
+  --color-dora-green: #34d399;
+  --color-dora-orange: #fb923c;
+  --color-dora-cream: #fef6ff;
+}
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #faf5ff;
+  color: #2e1065;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Soft floating animation for decorative blobs */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(4deg);
+  }
+}
+
+@keyframes float-slower {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+.animate-float-slower {
+  animation: float-slower 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-slower {
+    animation: none;
+  }
+  :root {
+    scroll-behavior: auto;
+  }
+}
