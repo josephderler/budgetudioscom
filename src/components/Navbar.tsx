@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { site } from "@/data/site";
+import { useI18n } from "@/i18n/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const links = [
-  { label: "Features", href: "/#features" },
-  { label: "Gameplay", href: "/#gameplay" },
-  { label: "Video", href: "/#video" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/contact" },
+  { key: "nav.features", href: "/#features" },
+  { key: "nav.gameplay", href: "/#gameplay" },
+  { key: "nav.video", href: "/#video" },
+  { key: "nav.about", href: "/#about" },
+  { key: "nav.contact", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const { t } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -47,32 +49,31 @@ export default function Navbar() {
           {links.map((l) =>
             l.href.includes("#") ? (
               <a
-                key={l.label}
+                key={l.key}
                 href={l.href}
                 className="text-sm font-bold text-dora-purple-deep/70 transition-colors hover:text-dora-pink"
               >
-                {l.label}
+                {t(l.key)}
               </a>
             ) : (
               <Link
-                key={l.label}
+                key={l.key}
                 to={l.href}
                 className="text-sm font-bold text-dora-purple-deep/70 transition-colors hover:text-dora-pink"
               >
-                {l.label}
+                {t(l.key)}
               </Link>
             )
           )}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
           <a
-            href={site.stores.appStore}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#download"
             className="rounded-full bg-gradient-to-r from-dora-violet to-dora-pink px-5 py-2.5 text-sm font-extrabold text-white shadow-lg shadow-dora-pink/30 transition-transform hover:-translate-y-0.5"
           >
-            Play Free
+            {t("nav.playFree")}
           </a>
         </div>
 
@@ -101,32 +102,33 @@ export default function Navbar() {
             {links.map((l) =>
               l.href.includes("#") ? (
                 <a
-                  key={l.label}
+                  key={l.key}
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className="rounded-xl px-3 py-2.5 text-sm font-bold text-dora-purple-deep/80 hover:bg-dora-cream"
                 >
-                  {l.label}
+                  {t(l.key)}
                 </a>
               ) : (
                 <Link
-                  key={l.label}
+                  key={l.key}
                   to={l.href}
                   onClick={() => setOpen(false)}
                   className="rounded-xl px-3 py-2.5 text-sm font-bold text-dora-purple-deep/80 hover:bg-dora-cream"
                 >
-                  {l.label}
+                  {t(l.key)}
                 </Link>
               )
             )}
+            <div className="mt-2 px-1">
+              <LanguageSwitcher />
+            </div>
             <a
-              href={site.stores.appStore}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#download"
               onClick={() => setOpen(false)}
-              className="mt-1 rounded-xl bg-gradient-to-r from-dora-violet to-dora-pink px-3 py-2.5 text-center text-sm font-extrabold text-white"
+              className="mt-2 rounded-xl bg-gradient-to-r from-dora-violet to-dora-pink px-3 py-2.5 text-center text-sm font-extrabold text-white"
             >
-              Play Free
+              {t("nav.playFree")}
             </a>
           </div>
         </div>

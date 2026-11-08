@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/app-icon.jpg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
     <link rel="apple-touch-icon" href="/app-icon.jpg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#5b21b6" />
+    <link rel="canonical" href="https://budgetudios.com/" />
+    <link rel="preload" as="image" href="/shots/8.webp" fetchpriority="high" />
 
     <title>Dora: Explore and Play! — Learning Adventure Game for Kids</title>
     <meta
@@ -15,12 +20,15 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://budgetudios.com/" />
     <meta property="og:title" content="Dora: Explore and Play! — Learning Adventure Game for Kids" />
     <meta
       property="og:description"
       content="An interactive learning adventure for toddlers and preschoolers. Explore, learn words, make music, and help friends with Dora."
     />
-    <meta property="og:image" content="/shots/8.webp" />
+    <meta property="og:image" content="https://budgetudios.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Dora: Explore and Play!" />
 
     <!-- Twitter -->
@@ -30,7 +38,7 @@
       name="twitter:description"
       content="An interactive learning adventure for toddlers and preschoolers."
     />
-    <meta name="twitter:image" content="/shots/8.webp" />
+    <meta name="twitter:image" content="https://budgetudios.com/og.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +46,89 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured data: app + organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Dora: Explore and Play!",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "EducationalApplication",
+        "description": "An interactive learning adventure for toddlers and preschoolers. Explore vibrant worlds, learn words, make music, and help friends with Dora.",
+        "image": "https://budgetudios.com/app-icon.jpg",
+        "url": "https://budgetudios.com/",
+        "contentRating": "4+",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "3.9",
+          "ratingCount": "11404",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BUD STUDIO LTD",
+          "url": "https://budgetudios.com/",
+          "email": "support@budgetudios.com",
+          "telephone": "+15142899537",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "The Archives Unit 10, Bud Studio, Unit 309",
+            "addressLocality": "London",
+            "postalCode": "N15 4BE",
+            "addressCountry": "GB"
+          }
+        }
+      }
+    </script>
+
+    <!-- Structured data: FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the app free to download?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Dora: Explore and Play! is free to download on both the App Store and Google Play. It also offers optional subscriptions and in-app purchases that unlock extra content."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What age is the app designed for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's made for toddlers, preschoolers and younger kids, with a 4+ age rating. The gameplay is simple, frustration-free and built for small hands."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it safe for children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The app holds the ESRB Privacy Certified Kids' Privacy Seal and is designed with child safety in mind. We don't collect personal information from children for advertising."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The app is available in English, French, German, Italian, Portuguese and Spanish."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

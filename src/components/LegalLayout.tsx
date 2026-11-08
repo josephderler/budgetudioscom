@@ -1,7 +1,8 @@
 import { useEffect, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeftIcon } from "@/components/icons";
+import { ArrowLeft, type Icon as PhosphorIcon } from "@phosphor-icons/react";
+import { useI18n } from "@/i18n/LanguageContext";
 
 export type Section = { id: string; title: string };
 
@@ -10,7 +11,7 @@ type Props = {
   title: string;
   intro: string;
   updated: string;
-  Icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactElement;
+  Icon: PhosphorIcon;
   accent: string; // gradient classes for the hero + icon
   sections: Section[];
   children: ReactNode;
@@ -26,6 +27,7 @@ export default function LegalLayout({
   sections,
   children,
 }: Props) {
+  const { t } = useI18n();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -42,8 +44,8 @@ export default function LegalLayout({
             to="/"
             className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/25"
           >
-            <ArrowLeftIcon className="h-4 w-4" />
-            Back to home
+            <ArrowLeft className="h-4 w-4" weight="bold" />
+            {t("legal.backHome")}
           </Link>
 
           <motion.div
@@ -53,7 +55,7 @@ export default function LegalLayout({
             className="mt-8 flex items-start gap-5"
           >
             <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-white/20 text-white shadow-lg ring-1 ring-white/30 backdrop-blur">
-              <Icon className="h-8 w-8" />
+              <Icon className="h-8 w-8" weight="duotone" />
             </span>
             <div>
               <span className="font-display text-xs font-extrabold uppercase tracking-widest text-white/80">
@@ -67,7 +69,7 @@ export default function LegalLayout({
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">{intro}</p>
           <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur">
-            Last updated: {updated}
+            {t("legal.lastUpdated")} {updated}
           </p>
         </div>
       </header>
@@ -79,7 +81,7 @@ export default function LegalLayout({
           <aside className="hidden lg:block">
             <nav className="sticky top-24">
               <p className="mb-3 font-display text-xs font-extrabold uppercase tracking-widest text-dora-purple-deep/50">
-                On this page
+                {t("legal.onThisPage")}
               </p>
               <ul className="space-y-1 border-l-2 border-dora-violet/15">
                 {sections.map((s) => (

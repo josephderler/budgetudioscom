@@ -4,6 +4,8 @@ type Props = {
   src: string;
   alt: string;
   className?: string;
+  /** When true, load eagerly with high priority (use for above-the-fold hero). */
+  priority?: boolean;
 };
 
 /**
@@ -11,7 +13,7 @@ type Props = {
  * smartphone so wide (16:9) gameplay screenshots sit naturally inside it.
  * Adapted from a 21st.dev iPhone frame, rotated and simplified for landscape.
  */
-export default function PhoneMockup({ src, alt, className }: Props) {
+export default function PhoneMockup({ src, alt, className, priority }: Props) {
   return (
     <div className={cn("relative select-none", className)}>
       {/* Device body */}
@@ -26,7 +28,9 @@ export default function PhoneMockup({ src, alt, className }: Props) {
           <img
             src={src}
             alt={alt}
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            decoding="async"
             className="block aspect-[526/296] w-full object-cover"
           />
 

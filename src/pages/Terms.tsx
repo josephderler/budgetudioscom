@@ -1,7 +1,8 @@
 import LegalLayout, { type Section } from "@/components/LegalLayout";
 import { LegalSection, P, Bullets, ContactCard } from "@/components/legal-ui";
-import { ScaleIcon } from "@/components/icons";
+import { Scales } from "@phosphor-icons/react";
 import { company, site } from "@/data/site";
+import { useI18n } from "@/i18n/LanguageContext";
 
 const sections: Section[] = [
   { id: "license", title: "License to use" },
@@ -17,13 +18,14 @@ const sections: Section[] = [
 ];
 
 export default function Terms() {
+  const { t } = useI18n();
   return (
     <LegalLayout
-      eyebrow="Legal"
-      title="Terms of Use"
-      intro="These terms govern your use of the app and this website. The app is made for children and should be used under the supervision of a parent or guardian."
+      eyebrow={t("legal.eyebrow")}
+      title={t("terms.title")}
+      intro={t("terms.intro")}
       updated="November 7, 2026"
-      Icon={ScaleIcon}
+      Icon={Scales}
       accent="from-dora-pink via-dora-magenta to-dora-purple"
       sections={sections}
     >

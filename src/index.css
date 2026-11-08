@@ -26,6 +26,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  /* Prevent decorative blur blobs and offset grids from creating a
+     horizontal scroll that leaves the page shifted until the user interacts.
+     `clip` (not `hidden`) is used so position: sticky keeps working. */
+  overflow-x: clip;
 }
 
 body {
@@ -34,6 +39,10 @@ body {
   color: #2e1065;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+#root {
+  overflow-x: clip;
 }
 
 h1,
@@ -72,6 +81,16 @@ h4,
   animation: float-slower 9s ease-in-out infinite;
 }
 
+/* Accessible focus ring for keyboard users across all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-dora-violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float-slow,
   .animate-float-slower {
@@ -79,5 +98,14 @@ h4,
   }
   :root {
     scroll-behavior: auto;
+  }
+  /* Honor reduced-motion for all animations and transitions site-wide */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

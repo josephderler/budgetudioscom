@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { Sparkle, Star } from "@phosphor-icons/react";
 import { heroShot, site } from "@/data/site";
 import StoreButtons from "@/components/StoreButtons";
 import PhoneMockup from "@/components/PhoneMockup";
+import { useI18n } from "@/i18n/LanguageContext";
 
 const container = {
   hidden: {},
@@ -25,12 +27,12 @@ function Stars({ value }: { value: number }) {
         const fill = Math.max(0, Math.min(1, value - i));
         return (
           <span key={i} className="relative inline-block h-4 w-4">
-            <span className="absolute inset-0 text-slate-300">★</span>
+            <Star weight="fill" className="absolute inset-0 h-4 w-4 text-slate-200" />
             <span
-              className="absolute inset-0 overflow-hidden text-dora-yellow"
+              className="absolute inset-0 overflow-hidden"
               style={{ width: `${fill * 100}%` }}
             >
-              ★
+              <Star weight="fill" className="h-4 w-4 text-dora-yellow" />
             </span>
           </span>
         );
@@ -40,6 +42,7 @@ function Stars({ value }: { value: number }) {
 }
 
 export default function Hero() {
+  const { t } = useI18n();
   return (
     <section className="relative overflow-hidden pb-20 pt-28 sm:pt-32 md:pb-28 md:pt-36">
       {/* Playful gradient background */}
@@ -62,17 +65,18 @@ export default function Hero() {
             variants={item}
             className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-sm font-bold text-dora-purple shadow-sm ring-1 ring-dora-violet/20 backdrop-blur"
           >
-            🌟 Ages 4+ · Education · Free to play
+            <Sparkle className="h-4 w-4" weight="fill" />
+            {t("hero.badge")}
           </motion.span>
 
           <motion.h1
             variants={item}
             className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-dora-purple-deep sm:text-5xl lg:text-6xl"
           >
-            Explore, Learn &amp; Play
+            {t("hero.title1")}
             <br />
             <span className="bg-gradient-to-r from-dora-pink via-dora-magenta to-dora-violet bg-clip-text text-transparent">
-              with Dora!
+              {t("hero.title2")}
             </span>
           </motion.h1>
 
@@ -80,11 +84,11 @@ export default function Hero() {
             variants={item}
             className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-dora-purple-deep/75 lg:mx-0"
           >
-            {site.shortPitch}
+            {t("hero.shortPitch")}
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex justify-center lg:justify-start">
-            <StoreButtons />
+            <StoreButtons location="hero" />
           </motion.div>
 
           <motion.div
@@ -93,28 +97,104 @@ export default function Hero() {
           >
             <Stars value={site.rating.stars} />
             <span className="text-sm font-bold text-dora-purple-deep/80">
-              {site.rating.stars} · {site.rating.count} ratings on the {site.rating.source}
+              {t("hero.ratingLine")
+                .replace("{stars}", String(site.rating.stars))
+                .replace("{count}", site.rating.count)
+                .replace("{source}", site.rating.source)}
             </span>
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="mt-5 flex flex-wrap items-center justify-center gap-2 lg:justify-start"
+          >
+            <span className="text-xs font-bold uppercase tracking-wide text-dora-purple-deep/50">
+              {t("hero.availableIn")}
+            </span>
+            {site.languages.map((l) => (
+              <span
+                key={l}
+                className="rounded-md bg-white/70 px-2 py-1 text-xs font-extrabold text-dora-purple-deep/70 ring-1 ring-dora-violet/10"
+              >
+                {l}
+              </span>
+            ))}
           </motion.div>
         </motion.div>
 
-        {/* Device */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 30, rotate: -3 }}
-          animate={{ opacity: 1, scale: 1, y: 0, rotate: -2 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="relative mx-auto w-full max-w-xl"
-        >
-          <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-white/40 blur-2xl" />
-          <PhoneMockup
-            src={heroShot}
-            alt="Dora: Explore and Play! gameplay — explore the jungle with Dora and friends"
-          />
-          {/* floating emoji accents */}
-          <span className="animate-float-slow absolute -left-4 -top-4 text-4xl drop-shadow">⭐</span>
-          <span className="animate-float-slower absolute -right-3 top-1/3 text-4xl drop-shadow">🎵</span>
-          <span className="animate-float-slow absolute -bottom-5 left-10 text-4xl drop-shadow">🗺️</span>
-        </motion.div>
+        {/* Device composition */}
+        <div className="relative mx-auto w-full max-w-xl">
+          <div className="absolute -inset-8 -z-10 rounded-[3rem] bg-white/40 blur-2xl" />
+
+          {/* Back layer: second screen peeking behind */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: 40, rotate: 4 }}
+            animate={{ opacity: 1, scale: 0.9, y: 0, rotate: 6 }}
+            transition={{ duration: 1, delay: 0.45, ease: "easeOut" }}
+            className="absolute inset-0 -z-10 translate-x-10 translate-y-6 opacity-70"
+            aria-hidden="true"
+          >
+            <PhoneMockup src="/shots/4.webp" alt="" />
+          </motion.div>
+
+          {/* Front layer: main screen */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 30, rotate: -3 }}
+            animate={{ opacity: 1, scale: 1, y: 0, rotate: -2 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            className="relative"
+          >
+            <PhoneMockup
+              src={heroShot}
+              alt="Dora: Explore and Play! gameplay — explore the jungle with Dora and friends"
+              priority
+            />
+          </motion.div>
+
+          {/* Floating rating chip */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="animate-float-slow absolute -left-4 top-6 flex items-center gap-2 rounded-2xl bg-white/95 px-3.5 py-2.5 shadow-xl shadow-dora-purple/20 ring-1 ring-dora-violet/10 backdrop-blur"
+          >
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-dora-yellow to-dora-orange text-white">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+                <path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3Z" />
+              </svg>
+            </span>
+            <div className="leading-tight">
+              <p className="font-display text-sm font-extrabold text-dora-purple-deep">
+                {t("hero.ratingChip").replace("{stars}", String(site.rating.stars))}
+              </p>
+              <p className="text-[11px] font-semibold text-dora-purple-deep/50">
+                {t("hero.ratingChipSub").replace("{count}", site.rating.count)}
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Floating "free" chip */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.05 }}
+            className="animate-float-slower absolute -bottom-3 right-2 flex items-center gap-2 rounded-2xl bg-white/95 px-3.5 py-2.5 shadow-xl shadow-dora-purple/20 ring-1 ring-dora-violet/10 backdrop-blur"
+          >
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-dora-green to-dora-sky text-white">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current stroke-[2.5]">
+                <path d="m5 12 4.5 4.5L19 7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <div className="leading-tight">
+              <p className="font-display text-sm font-extrabold text-dora-purple-deep">
+                {t("hero.freeChip")}
+              </p>
+              <p className="text-[11px] font-semibold text-dora-purple-deep/50">
+                {t("hero.freeChipSub")}
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

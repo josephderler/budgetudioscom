@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { site } from "@/data/site";
+import { useI18n } from "@/i18n/LanguageContext";
 
 export default function VideoSection() {
+  const { t } = useI18n();
   const [playing, setPlaying] = useState(false);
-  const thumb = `https://i.ytimg.com/vi/${site.youtubeId}/maxresdefault.jpg`;
+  // maxresdefault is not available for every video (YouTube returns a 404
+  // placeholder that still "loads", defeating onError). sddefault is the
+  // largest reliably-available thumbnail; fall back to hqdefault if needed.
+  const thumb = `https://i.ytimg.com/vi/${site.youtubeId}/sddefault.jpg`;
 
   return (
     <section id="video" className="relative overflow-hidden bg-dora-purple-deep py-20 md:py-28">
@@ -13,13 +18,13 @@ export default function VideoSection() {
 
       <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
         <span className="font-display text-sm font-extrabold uppercase tracking-widest text-dora-yellow">
-          Watch the trailer
+          {t("video.eyebrow")}
         </span>
         <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Press play and meet Dora
+          {t("video.title")}
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">
-          Get a sneak peek of the songs, friends and mini-games waiting inside the app.
+          {t("video.subtitle")}
         </p>
 
         <motion.div
@@ -43,14 +48,14 @@ export default function VideoSection() {
                 type="button"
                 onClick={() => setPlaying(true)}
                 className="group absolute inset-0 h-full w-full"
-                aria-label="Play trailer"
+                aria-label={t("video.playAria")}
               >
                 <img
                   src={thumb}
                   alt="Dora: Explore and Play! trailer thumbnail"
                   className="h-full w-full object-cover"
                   onError={(e) => {
-                    // maxresdefault not always available — fall back to hqdefault
+                    // sddefault missing — fall back to the always-present hqdefault
                     const img = e.currentTarget;
                     if (!img.dataset.fallback) {
                       img.dataset.fallback = "1";

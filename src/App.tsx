@@ -1,11 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import ConsentBanner from "@/components/ConsentBanner";
 import Home from "@/pages/Home";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import Contact from "@/pages/Contact";
+import NotFound from "@/pages/NotFound";
 
 // Scrolls to #hash targets (and to top on plain route changes).
 function ScrollManager() {
@@ -23,19 +27,44 @@ function ScrollManager() {
   return null;
 }
 
+// Soft fade/slide applied on every route change.
+function Page({ children }: { children: ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Page><Home /></Page>} />
+        <Route path="/privacy" element={<Page><Privacy /></Page>} />
+        <Route path="/terms" element={<Page><Terms /></Page>} />
+        <Route path="/contact" element={<Page><Contact /></Page>} />
+        <Route path="*" element={<Page><NotFound /></Page>} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 export default function App() {
   return (
     <>
       <ScrollManager />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <AnimatedRoutes />
       <Footer />
+      <ScrollToTop />
+      <ConsentBanner />
     </>
   );
 }

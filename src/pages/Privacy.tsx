@@ -1,7 +1,8 @@
 import LegalLayout, { type Section } from "@/components/LegalLayout";
 import { LegalSection, P, Bullets, ContactCard } from "@/components/legal-ui";
-import { LockIcon } from "@/components/icons";
+import { ShieldCheck } from "@phosphor-icons/react";
 import { company, site } from "@/data/site";
+import { useI18n } from "@/i18n/LanguageContext";
 
 const sections: Section[] = [
   { id: "children", title: "Children's privacy" },
@@ -17,13 +18,14 @@ const sections: Section[] = [
 ];
 
 export default function Privacy() {
+  const { t } = useI18n();
   return (
     <LegalLayout
-      eyebrow="Legal"
-      title="Privacy Policy"
-      intro="Protecting children's privacy is at the heart of how we build and operate the app. This policy explains, in plain language, what we do and don't do with data."
+      eyebrow={t("legal.eyebrow")}
+      title={t("privacy.title")}
+      intro={t("privacy.intro")}
       updated="November 7, 2026"
-      Icon={LockIcon}
+      Icon={ShieldCheck}
       accent="from-dora-violet via-dora-purple to-dora-blue"
       sections={sections}
     >

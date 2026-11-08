@@ -1,8 +1,12 @@
 import { site } from "@/data/site";
+import { track } from "@/lib/analytics";
+import { useI18n } from "@/i18n/LanguageContext";
 
 type Props = {
   className?: string;
   size?: "md" | "lg";
+  /** Where the buttons appear, recorded with the click event. */
+  location?: string;
 };
 
 function AppleIcon() {
@@ -24,7 +28,8 @@ function GooglePlayIcon() {
   );
 }
 
-export default function StoreButtons({ className = "", size = "lg" }: Props) {
+export default function StoreButtons({ className = "", size = "lg", location = "unknown" }: Props) {
+  const { t } = useI18n();
   const pad = size === "lg" ? "px-6 py-3.5" : "px-5 py-3";
   return (
     <div className={`flex flex-wrap items-center gap-4 ${className}`}>
@@ -32,13 +37,14 @@ export default function StoreButtons({ className = "", size = "lg" }: Props) {
         href={site.stores.appStore}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => track("store_click", { store: "app_store", location })}
         className={`group flex items-center gap-3 rounded-2xl bg-slate-900 ${pad} text-white shadow-lg shadow-slate-900/20 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dora-violet`}
-        aria-label="Download on the App Store"
+        aria-label={t("store.apple.aria")}
       >
         <AppleIcon />
         <span className="text-left leading-tight">
           <span className="block text-[11px] font-semibold uppercase tracking-wide text-white/70">
-            Download on the
+            {t("store.apple.pre")}
           </span>
           <span className="block font-display text-lg font-bold">App Store</span>
         </span>
@@ -48,13 +54,14 @@ export default function StoreButtons({ className = "", size = "lg" }: Props) {
         href={site.stores.googlePlay}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => track("store_click", { store: "google_play", location })}
         className={`group flex items-center gap-3 rounded-2xl bg-slate-900 ${pad} text-white shadow-lg shadow-slate-900/20 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dora-violet`}
-        aria-label="Get it on Google Play"
+        aria-label={t("store.google.aria")}
       >
         <GooglePlayIcon />
         <span className="text-left leading-tight">
           <span className="block text-[11px] font-semibold uppercase tracking-wide text-white/70">
-            Get it on
+            {t("store.google.pre")}
           </span>
           <span className="block font-display text-lg font-bold">Google Play</span>
         </span>

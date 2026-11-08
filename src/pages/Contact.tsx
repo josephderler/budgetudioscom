@@ -1,46 +1,49 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { company } from "@/data/site";
+import { company, site } from "@/data/site";
+import { useI18n } from "@/i18n/LanguageContext";
 import {
-  ArrowLeftIcon,
-  MailIcon,
-  PhoneIcon,
-  PinIcon,
-  BuildingIcon,
-  ClockIcon,
-  HeadsetIcon,
-  SendIcon,
-} from "@/components/icons";
-
-const contactCards = [
-  {
-    Icon: MailIcon,
-    label: "Email us",
-    value: company.email,
-    href: `mailto:${company.email}`,
-    note: "We reply within 1–2 business days.",
-    accent: "from-dora-violet to-dora-purple",
-  },
-  {
-    Icon: PhoneIcon,
-    label: "Call us",
-    value: company.phone,
-    href: `tel:${company.phoneHref}`,
-    note: "Mon–Fri, business hours.",
-    accent: "from-dora-sky to-dora-blue",
-  },
-  {
-    Icon: PinIcon,
-    label: "Visit us",
-    value: company.address,
-    href: undefined,
-    note: `${company.name} · Company No. ${company.number}`,
-    accent: "from-dora-pink to-dora-magenta",
-  },
-];
+  ArrowLeft,
+  EnvelopeSimple,
+  Phone,
+  MapPin,
+  Buildings,
+  Clock,
+  Headset,
+  PaperPlaneTilt,
+} from "@phosphor-icons/react";
 
 export default function Contact() {
+  const { t } = useI18n();
+
+  const contactCards = [
+    {
+      Icon: EnvelopeSimple,
+      label: t("contact.card.email.label"),
+      value: company.email,
+      href: `mailto:${company.email}`,
+      note: t("contact.card.email.note"),
+      accent: "from-dora-violet to-dora-purple",
+    },
+    {
+      Icon: Phone,
+      label: t("contact.card.call.label"),
+      value: company.phone,
+      href: `tel:${company.phoneHref}`,
+      note: t("contact.card.call.note"),
+      accent: "from-dora-sky to-dora-blue",
+    },
+    {
+      Icon: MapPin,
+      label: t("contact.card.visit.label"),
+      value: company.address,
+      href: undefined,
+      note: `${company.name} · ${t("contact.company.number")} ${company.number}`,
+      accent: "from-dora-pink to-dora-magenta",
+    },
+  ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -49,9 +52,9 @@ export default function Contact() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(form.subject || "Message from budgetudios.com");
+    const subject = encodeURIComponent(form.subject || t("contact.form.defaultSubject"));
     const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+      `${t("contact.mail.name")}: ${form.name}\n${t("contact.mail.email")}: ${form.email}\n\n${form.message}`
     );
     window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
   };
@@ -72,8 +75,8 @@ export default function Contact() {
             to="/"
             className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/25"
           >
-            <ArrowLeftIcon className="h-4 w-4" />
-            Back to home
+            <ArrowLeft className="h-4 w-4" weight="bold" />
+            {t("legal.backHome")}
           </Link>
 
           <motion.div
@@ -83,27 +86,26 @@ export default function Contact() {
             className="mt-8 flex items-start gap-5"
           >
             <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-white/20 text-white shadow-lg ring-1 ring-white/30 backdrop-blur">
-              <HeadsetIcon className="h-8 w-8" />
+              <Headset className="h-8 w-8" weight="duotone" />
             </span>
             <div>
               <span className="font-display text-xs font-extrabold uppercase tracking-widest text-white/80">
-                We're here to help
+                {t("contact.eyebrow")}
               </span>
               <h1 className="mt-1 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                Get in touch
+                {t("contact.title")}
               </h1>
             </div>
           </motion.div>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
-            Questions, feedback or support requests about {company.name.split(" ")[0]}? Our
-            team would love to hear from you. Reach out any way that works best.
+            {t("contact.intro").replace("{app}", site.appName)}
           </p>
         </div>
       </header>
 
       {/* Contact cards */}
-      <section className="mx-auto -mt-10 max-w-5xl px-4 sm:px-6">
+      <section className="relative z-10 mx-auto -mt-10 max-w-5xl px-4 sm:px-6">
         <div className="grid gap-5 sm:grid-cols-3">
           {contactCards.map((c, i) => {
             const inner = (
@@ -111,7 +113,7 @@ export default function Contact() {
                 <div
                   className={`grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${c.accent} text-white shadow-md transition-transform duration-300 group-hover:scale-110`}
                 >
-                  <c.Icon className="h-6 w-6" />
+                  <c.Icon className="h-6 w-6" weight="duotone" />
                 </div>
                 <p className="mt-4 font-display text-xs font-extrabold uppercase tracking-widest text-dora-purple-deep/50">
                   {c.label}
@@ -150,17 +152,17 @@ export default function Contact() {
           {/* Form */}
           <div className="rounded-3xl bg-white p-7 shadow-[0_15px_50px_-25px_rgba(109,40,217,0.35)] ring-1 ring-dora-violet/10 sm:p-9">
             <h2 className="font-display text-2xl font-extrabold text-dora-purple-deep">
-              Send us a message
+              {t("contact.form.title")}
             </h2>
             <p className="mt-2 text-sm text-dora-purple-deep/60">
-              Fill in the form and your email app will open with everything ready to send.
+              {t("contact.form.intro")}
             </p>
 
             <form onSubmit={onSubmit} className="mt-6 space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label className={label} htmlFor="name">
-                    Name
+                    {t("contact.form.name")}
                   </label>
                   <input
                     id="name"
@@ -169,12 +171,12 @@ export default function Contact() {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className={field}
-                    placeholder="Your name"
+                    placeholder={t("contact.form.name.ph")}
                   />
                 </div>
                 <div>
                   <label className={label} htmlFor="email">
-                    Email
+                    {t("contact.form.email")}
                   </label>
                   <input
                     id="email"
@@ -183,13 +185,13 @@ export default function Contact() {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className={field}
-                    placeholder="you@example.com"
+                    placeholder={t("contact.form.email.ph")}
                   />
                 </div>
               </div>
               <div>
                 <label className={label} htmlFor="subject">
-                  Subject
+                  {t("contact.form.subject")}
                 </label>
                 <input
                   id="subject"
@@ -197,12 +199,12 @@ export default function Contact() {
                   value={form.subject}
                   onChange={(e) => setForm({ ...form, subject: e.target.value })}
                   className={field}
-                  placeholder="How can we help?"
+                  placeholder={t("contact.form.subject.ph")}
                 />
               </div>
               <div>
                 <label className={label} htmlFor="message">
-                  Message
+                  {t("contact.form.message")}
                 </label>
                 <textarea
                   id="message"
@@ -211,15 +213,15 @@ export default function Contact() {
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className={`${field} resize-none`}
-                  placeholder="Write your message..."
+                  placeholder={t("contact.form.message.ph")}
                 />
               </div>
               <button
                 type="submit"
                 className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-dora-violet to-dora-pink px-6 py-3.5 font-display font-extrabold text-white shadow-lg shadow-dora-pink/30 transition-transform hover:-translate-y-0.5"
               >
-                <SendIcon className="h-5 w-5" />
-                Send message
+                <PaperPlaneTilt className="h-5 w-5" weight="fill" />
+                {t("contact.form.send")}
               </button>
             </form>
           </div>
@@ -228,20 +230,20 @@ export default function Contact() {
           <aside className="flex flex-col gap-5">
             <div className="rounded-3xl bg-gradient-to-br from-dora-purple-deep to-dora-purple p-7 text-white shadow-lg">
               <span className="grid h-11 w-11 place-items-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
-                <BuildingIcon className="h-6 w-6" />
+                <Buildings className="h-6 w-6" weight="duotone" />
               </span>
               <h3 className="mt-4 font-display text-lg font-extrabold">{company.name}</h3>
               <dl className="mt-4 space-y-2.5 text-sm text-white/80">
                 <div className="flex justify-between gap-4">
-                  <dt className="text-white/60">Company No.</dt>
+                  <dt className="text-white/60">{t("contact.company.number")}</dt>
                   <dd className="font-semibold">{company.number}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt className="text-white/60">Status</dt>
+                  <dt className="text-white/60">{t("contact.company.status")}</dt>
                   <dd className="font-semibold text-dora-green">{company.status}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt className="text-white/60">Founded</dt>
+                  <dt className="text-white/60">{t("contact.company.founded")}</dt>
                   <dd className="font-semibold">{company.founded}</dd>
                 </div>
               </dl>
@@ -252,14 +254,14 @@ export default function Contact() {
 
             <div className="flex items-start gap-3 rounded-3xl bg-white p-6 ring-1 ring-dora-violet/10">
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-dora-green/15 text-dora-green">
-                <ClockIcon className="h-5 w-5" />
+                <Clock className="h-5 w-5" weight="duotone" />
               </span>
               <div>
                 <p className="font-display font-extrabold text-dora-purple-deep">
-                  Support hours
+                  {t("contact.hours.title")}
                 </p>
                 <p className="mt-1 text-sm text-dora-purple-deep/60">
-                  We aim to respond to every message within 1–2 business days.
+                  {t("contact.hours.body")}
                 </p>
               </div>
             </div>
