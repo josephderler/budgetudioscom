@@ -194,6 +194,30 @@ export default function Hero() {
               </p>
             </div>
           </motion.div>
+
+          {/* Floating teacher-approved chip */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="animate-float-slow absolute -bottom-6 left-0 flex items-center gap-2 rounded-2xl bg-white/95 px-3.5 py-2.5 shadow-xl shadow-dora-purple/20 ring-1 ring-dora-violet/10 backdrop-blur sm:-left-4"
+          >
+            <img
+              src="/teacher.png"
+              alt={t("teacher.badge")}
+              width={36}
+              height={36}
+              className="h-9 w-9 shrink-0"
+            />
+            <div className="leading-tight">
+              <p className="font-display text-sm font-extrabold text-dora-purple-deep">
+                {t("hero.teacherChip")}
+              </p>
+              <p className="text-[11px] font-semibold text-dora-purple-deep/50">
+                {t("hero.teacherChipSub")}
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

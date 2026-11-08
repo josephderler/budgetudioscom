@@ -31,18 +31,30 @@ const en: Dict = {
   "hero.title2": "Play with Dora!",
   "hero.availableIn": "Available in",
   "hero.shortPitch":
-    "¡Hola! Join Dora and her friends on a magical journey packed with exploration, music, words and kindness — designed especially for toddlers and preschoolers.",
+    "¡Hola! Step inside Dora's world and explore iconic places — from her Casita to the Tallest Mountain — while learning first Spanish words, counting and kindness along the way. An immersive, bilingual adventure made for toddlers and preschoolers.",
   "hero.ratingLine": "{stars} · {count} ratings on the {source}",
   "hero.ratingChip": "{stars} rating",
   "hero.ratingChipSub": "{count} parents",
   "hero.freeChip": "Free to play",
   "hero.freeChipSub": "Ages 4+ · Education",
+  "hero.teacherChip": "Teacher approved",
+  "hero.teacherChipSub": "Built for early learning",
 
   // TrustBar
   "trust.badge1": "ESRB Privacy Certified",
   "trust.badge2": "Made for ages 4+",
   "trust.badge3": "Available in 6 languages",
   "trust.badge4": "Education category",
+
+  // Teacher approved
+  "teacher.eyebrow": "Teacher approved",
+  "teacher.title": "Trusted by educators and parents",
+  "teacher.body":
+    "Dora: Explore and Play! is built around early-learning principles and reviewed with educators in mind, so every mini-game supports real preschool milestones — curiosity, language, problem-solving and social-emotional skills.",
+  "teacher.point1": "Designed to support preschool learning goals",
+  "teacher.point2": "ESRB Privacy Certified and safe for children",
+  "teacher.point3": "Frustration-free play, approved for little learners",
+  "teacher.badge": "Educator approved",
 
   // How it works
   "how.eyebrow": "How it works",
@@ -65,53 +77,53 @@ const en: Dict = {
     "Every tap is a chance to explore, learn and grow — wrapped in the colorful, friendly world of Dora.",
   "feature.explore.title": "Explore & Discover",
   "feature.explore.desc":
-    "Adventure across vibrant, iconic locations — from Dora's Casita to the Tallest Mountain — and spark curiosity and problem-solving along the way.",
+    "Adventure across vibrant, iconic locations — from Dora's Casita to the Tallest Mountain — each full of hidden surprises that spark curiosity and problem-solving at every turn.",
   "feature.words.title": "Learn Words",
   "feature.words.desc":
-    "Playful mini-games introduce basic Spanish vocabulary and phrases, turning every tap into a bilingual learning moment.",
+    "Playful mini-games teach basic Spanish words and phrases, simple counting, shapes and colors — turning every tap into a bilingual learning moment.",
   "feature.music.title": "Make Music",
   "feature.music.desc":
-    "Drum, dance and sing! Musical activities let children engage with the rhythm and sounds of Dora's colorful world.",
+    "Drum, dance and sing along to the rhythm and sounds of Dora's world — joyful musical activities that get little ones moving.",
   "feature.friends.title": "Help Friends",
   "feature.friends.desc":
-    "Join Boots, Tico, Isa and Benny on their missions and build empathy, kindness and teamwork with every challenge.",
+    "Help Boots the monkey, Tico the squirrel, Isa the iguana and Benny the bull overcome obstacles — building kindness, teamwork and real social-emotional skills.",
   "feature.activities.title": "Fun Activities",
   "feature.activities.desc":
-    "Shapes, colors, counting and creative play keep little minds busy with frustration-free challenges made for small hands.",
+    "Shapes, colors, counting and shape-matching challenges spark creativity and keep little minds busy — all frustration-free and made for small hands.",
   "feature.safe.title": "Safe & Kid-Friendly",
   "feature.safe.desc":
-    "ESRB Privacy Certified and built around preschool milestones, so parents can relax while kids explore and learn.",
+    "ESRB Privacy Certified and built to support preschool milestones, with easy, frustration-free play designed for the youngest explorers — so parents can relax.",
 
   // Characters
   "char.eyebrow": "Meet the friends",
   "char.title": "An adventure is better together",
   "char.subtitle": "Say hola to Dora and the friends your child will explore, learn and play with.",
   "char.dora.role": "The explorer",
-  "char.dora.blurb": "Brave, curious and always ready for the next adventure with her trusty Backpack and Map.",
+  "char.dora.blurb": "A brave, curious little girl who leads every adventure — follow her Map and Backpack as your child helps choose the path.",
   "char.boots.role": "Best friend",
-  "char.boots.blurb": "Dora's playful monkey pal who loves to jump, climb and lend a helping hand.",
+  "char.boots.blurb": "Dora's playful monkey who loves to jump and climb — kids cheer him on and help him reach each next step.",
   "char.tico.role": "The squirrel",
-  "char.tico.blurb": "A friendly, fast little squirrel who zips around and speaks mostly Spanish.",
+  "char.tico.blurb": "A fast, friendly squirrel who speaks mostly Spanish — a fun way for children to pick up their first words.",
   "char.isa.role": "The iguana",
-  "char.isa.blurb": "A green-thumbed iguana who adores flowers, gardens and solving puzzles together.",
+  "char.isa.blurb": "A green-thumbed iguana who loves flowers and gardens — children solve gentle puzzles side by side with her.",
   "char.benny.role": "The bull",
-  "char.benny.blurb": "A big-hearted, gentle bull who's always cheerful and up for a song.",
+  "char.benny.blurb": "A big-hearted, gentle bull who needs a helping hand — kids lend kindness and share a cheerful song.",
 
   // Age guide
   "age.eyebrow": "Grows with your child",
   "age.title": "Learning for every little stage",
   "age.subtitle": "Age-appropriate play that supports preschool milestones as your child grows.",
   "age.stage1.title": "First discoveries",
-  "age.stage1.point1": "Taps, drags and simple cause-and-effect play",
-  "age.stage1.point2": "Colors, shapes and first words",
-  "age.stage1.point3": "Gentle, frustration-free exploration",
+  "age.stage1.point1": "First taps and drags with simple cause-and-effect",
+  "age.stage1.point2": "Bright colors, basic shapes and first words",
+  "age.stage1.point3": "Gentle, frustration-free exploration for small hands",
   "age.stage2.title": "Growing skills",
-  "age.stage2.point1": "Basic Spanish vocabulary and phrases",
-  "age.stage2.point2": "Counting, matching and problem-solving",
-  "age.stage2.point3": "Helping friends builds empathy & teamwork",
+  "age.stage2.point1": "First Spanish words, phrases and simple counting",
+  "age.stage2.point2": "Shape-matching, problem-solving and finding the best path",
+  "age.stage2.point3": "Helping Dora's friends builds empathy & teamwork",
   "age.stage3.title": "Confident explorers",
   "age.stage3.point1": "Longer adventures and richer mini-games",
-  "age.stage3.point2": "Creative activities and music-making",
+  "age.stage3.point2": "Creative activities, music-making and rhythm",
   "age.stage3.point3": "Independent play and storytelling",
 
   // Gallery
@@ -126,11 +138,11 @@ const en: Dict = {
 
   // About
   "about.eyebrow": "Bringing the show to life",
-  "about.title": "More than a game — a real Dora experience",
+  "about.title": "Not just a game — an immersive Dora experience",
   "about.body":
-    "We captured the heart of the show: interactivity, bilingual education and an adventurous spirit. It's like stepping right inside an episode, where every discovery builds curiosity, confidence and kindness.",
-  "about.check1": "Designed for toddlers, preschool and younger kids",
-  "about.check2": "Frustration-free gameplay made for small hands",
+    "It's like being inside an episode: we captured the heart of the show — its interactivity, bilingual learning and adventurous spirit. Every discovery builds curiosity and problem-solving, every friend teaches kindness, and every mini-game is built to support real preschool milestones.",
+  "about.check1": "Safe & kid-friendly, designed with child safety in mind",
+  "about.check2": "Educational foundation built to support preschool milestones",
   "about.check3": "ESRB Privacy Certified Kids' Privacy Seal",
   "about.stat1.label": "years of Dora adventures loved worldwide",
   "about.stat2.label": "countries where Dora is seen",
@@ -364,18 +376,30 @@ const es: Dict = {
   "hero.title2": "juega con Dora!",
   "hero.availableIn": "Disponible en",
   "hero.shortPitch":
-    "¡Hola! Acompaña a Dora y sus amigos en un viaje mágico lleno de exploración, música, palabras y amabilidad, pensado especialmente para bebés y niños en edad preescolar.",
+    "¡Hola! Métete en el mundo de Dora y explora lugares emblemáticos —desde su Casita hasta la Montaña más Alta— mientras aprendes primeras palabras en español, a contar y amabilidad por el camino. Una aventura bilingüe e inmersiva para bebés y preescolares.",
   "hero.ratingLine": "{stars} · {count} valoraciones en {source}",
   "hero.ratingChip": "{stars} de valoración",
   "hero.ratingChipSub": "{count} familias",
   "hero.freeChip": "Gratis para jugar",
   "hero.freeChipSub": "Para mayores de 4 · Educación",
+  "hero.teacherChip": "Aprobado por educadores",
+  "hero.teacherChipSub": "Creado para el aprendizaje temprano",
 
   // TrustBar
   "trust.badge1": "Certificado de Privacidad ESRB",
   "trust.badge2": "Pensado para mayores de 4",
   "trust.badge3": "Disponible en 6 idiomas",
   "trust.badge4": "Categoría educación",
+
+  // Teacher approved
+  "teacher.eyebrow": "Aprobado por educadores",
+  "teacher.title": "Con la confianza de educadores y familias",
+  "teacher.body":
+    "Dora: Explore and Play! se basa en principios de aprendizaje temprano y está pensado teniendo en cuenta a los educadores, para que cada minijuego apoye hitos reales del preescolar: curiosidad, lenguaje, resolución de problemas y habilidades socioemocionales.",
+  "teacher.point1": "Diseñado para apoyar los objetivos de aprendizaje preescolar",
+  "teacher.point2": "Certificado de privacidad ESRB y seguro para los niños",
+  "teacher.point3": "Juego sin frustraciones, aprobado para pequeños exploradores",
+  "teacher.badge": "Aprobado por educadores",
 
   // How it works
   "how.eyebrow": "Cómo funciona",
@@ -398,53 +422,53 @@ const es: Dict = {
     "Cada toque es una oportunidad de explorar, aprender y crecer, dentro del colorido y amigable mundo de Dora.",
   "feature.explore.title": "Explora y descubre",
   "feature.explore.desc":
-    "Vive aventuras por lugares vibrantes y emblemáticos, desde la Casita de Dora hasta la Montaña más Alta, despertando la curiosidad y la resolución de problemas por el camino.",
+    "Vive aventuras por lugares vibrantes y emblemáticos —desde la Casita de Dora hasta la Montaña más Alta—, cada uno lleno de sorpresas escondidas que despiertan la curiosidad y la resolución de problemas a cada paso.",
   "feature.words.title": "Aprende palabras",
   "feature.words.desc":
-    "Los minijuegos presentan vocabulario y frases básicas en español, convirtiendo cada toque en un momento de aprendizaje bilingüe.",
+    "Los minijuegos enseñan palabras y frases básicas en español, a contar, formas y colores, convirtiendo cada toque en un momento de aprendizaje bilingüe.",
   "feature.music.title": "Haz música",
   "feature.music.desc":
-    "¡A tocar el tambor, bailar y cantar! Las actividades musicales acercan a los niños al ritmo y los sonidos del colorido mundo de Dora.",
+    "¡A tocar el tambor, bailar y cantar al ritmo y los sonidos del mundo de Dora! Actividades musicales alegres que ponen en movimiento a los más peques.",
   "feature.friends.title": "Ayuda a los amigos",
   "feature.friends.desc":
-    "Únete a Botas, Tico, Isa y Benny en sus misiones y desarrolla empatía, amabilidad y trabajo en equipo en cada reto.",
+    "Ayuda a Botas el monito, Tico la ardilla, Isa la iguana y Benny el toro a superar obstáculos, desarrollando amabilidad, trabajo en equipo y verdaderas habilidades socioemocionales.",
   "feature.activities.title": "Actividades divertidas",
   "feature.activities.desc":
-    "Formas, colores, conteo y juego creativo mantienen la mente ocupada con retos sin frustraciones hechos para manos pequeñas.",
+    "Retos de formas, colores, conteo y emparejar figuras despiertan la creatividad y mantienen la mente ocupada, sin frustraciones y hechos para manos pequeñas.",
   "feature.safe.title": "Seguro y apto para niños",
   "feature.safe.desc":
-    "Con Certificado de Privacidad ESRB y diseñado en torno a los hitos preescolares, para que las familias estén tranquilas mientras los peques exploran y aprenden.",
+    "Con Certificado de Privacidad ESRB y creado para apoyar los hitos preescolares, con un juego fácil y sin frustraciones pensado para los exploradores más pequeños, para que las familias estén tranquilas.",
 
   // Characters
   "char.eyebrow": "Conoce a los amigos",
   "char.title": "Una aventura es mejor en compañía",
   "char.subtitle": "Dile hola a Dora y a los amigos con los que tu peque explorará, aprenderá y jugará.",
   "char.dora.role": "La exploradora",
-  "char.dora.blurb": "Valiente, curiosa y siempre lista para la próxima aventura con su fiel Mochila y su Mapa.",
+  "char.dora.blurb": "Una niña valiente y curiosa que guía cada aventura: sigue su Mapa y su Mochila mientras tu peque ayuda a elegir el camino.",
   "char.boots.role": "Su mejor amigo",
-  "char.boots.blurb": "El juguetón monito de Dora, al que le encanta saltar, trepar y echar una mano.",
+  "char.boots.blurb": "El juguetón monito de Dora, al que le encanta saltar y trepar: los peques lo animan y le ayudan a dar cada paso.",
   "char.tico.role": "La ardilla",
-  "char.tico.blurb": "Una ardillita amistosa y veloz que corretea por todas partes y habla sobre todo en español.",
+  "char.tico.blurb": "Una ardilla rápida y amistosa que habla sobre todo en español: una forma divertida de aprender las primeras palabras.",
   "char.isa.role": "La iguana",
-  "char.isa.blurb": "Una iguana con muy buena mano para las plantas, que adora las flores, los jardines y resolver acertijos en equipo.",
+  "char.isa.blurb": "Una iguana amante de las flores y los jardines: los niños resuelven con ella sencillos acertijos codo con codo.",
   "char.benny.role": "El toro",
-  "char.benny.blurb": "Un toro tierno y bonachón, siempre alegre y dispuesto a cantar una canción.",
+  "char.benny.blurb": "Un toro tierno y bonachón que necesita una mano: los peques le regalan amabilidad y una alegre canción.",
 
   // Age guide
   "age.eyebrow": "Crece con tu peque",
   "age.title": "Aprendizaje para cada pequeña etapa",
   "age.subtitle": "Juego adecuado a su edad que acompaña los hitos preescolares a medida que tu peque crece.",
   "age.stage1.title": "Primeros descubrimientos",
-  "age.stage1.point1": "Toques, arrastres y juego sencillo de causa y efecto",
-  "age.stage1.point2": "Colores, formas y primeras palabras",
-  "age.stage1.point3": "Exploración suave y sin frustraciones",
+  "age.stage1.point1": "Primeros toques y arrastres con causa y efecto sencilla",
+  "age.stage1.point2": "Colores vivos, formas básicas y primeras palabras",
+  "age.stage1.point3": "Exploración suave y sin frustraciones para manos pequeñas",
   "age.stage2.title": "Habilidades en crecimiento",
-  "age.stage2.point1": "Vocabulario y frases básicas en español",
-  "age.stage2.point2": "Contar, emparejar y resolver problemas",
-  "age.stage2.point3": "Ayudar a los amigos fomenta la empatía y el trabajo en equipo",
+  "age.stage2.point1": "Primeras palabras y frases en español, y a contar",
+  "age.stage2.point2": "Emparejar figuras, resolver problemas y encontrar el mejor camino",
+  "age.stage2.point3": "Ayudar a los amigos de Dora fomenta la empatía y el trabajo en equipo",
   "age.stage3.title": "Exploradores con confianza",
   "age.stage3.point1": "Aventuras más largas y minijuegos más completos",
-  "age.stage3.point2": "Actividades creativas y creación musical",
+  "age.stage3.point2": "Actividades creativas, creación musical y ritmo",
   "age.stage3.point3": "Juego autónomo y narración de historias",
 
   // Gallery
@@ -459,11 +483,11 @@ const es: Dict = {
 
   // About
   "about.eyebrow": "Dando vida a la serie",
-  "about.title": "Más que un juego: una auténtica experiencia Dora",
+  "about.title": "No es solo un juego: una experiencia Dora envolvente",
   "about.body":
-    "Capturamos el corazón de la serie: interactividad, educación bilingüe y espíritu aventurero. Es como entrar dentro de un episodio, donde cada descubrimiento fomenta la curiosidad, la confianza y la amabilidad.",
-  "about.check1": "Diseñado para bebés, preescolares y niños pequeños",
-  "about.check2": "Juego sin frustraciones hecho para manos pequeñas",
+    "Es como estar dentro de un episodio: capturamos el corazón de la serie, su interactividad, su aprendizaje bilingüe y su espíritu aventurero. Cada descubrimiento fomenta la curiosidad y la resolución de problemas, cada amigo enseña amabilidad y cada minijuego está pensado para apoyar hitos reales del preescolar.",
+  "about.check1": "Seguro y apto para niños, diseñado pensando en su seguridad",
+  "about.check2": "Base educativa creada para apoyar los hitos preescolares",
   "about.check3": "Sello de Privacidad Infantil Certificado por ESRB",
   "about.stat1.label": "años de aventuras de Dora queridas en todo el mundo",
   "about.stat2.label": "países donde se ve a Dora",
@@ -697,18 +721,30 @@ const fr: Dict = {
   "hero.title2": "joue avec Dora !",
   "hero.availableIn": "Disponible en",
   "hero.shortPitch":
-    "¡Hola ! Accompagne Dora et ses amis dans un voyage magique rempli d'exploration, de musique, de mots et de gentillesse — spécialement conçu pour les tout-petits et les enfants d'âge préscolaire.",
+    "¡Hola ! Entre dans l'univers de Dora et explore des lieux emblématiques — de sa Casita à la Plus Haute Montagne — tout en apprenant tes premiers mots d'espagnol, à compter et la gentillesse en chemin. Une aventure bilingue et immersive pour les tout-petits et la maternelle.",
   "hero.ratingLine": "{stars} · {count} avis sur l'{source}",
   "hero.ratingChip": "{stars} de note",
   "hero.ratingChipSub": "{count} parents",
   "hero.freeChip": "Gratuit à jouer",
   "hero.freeChipSub": "Dès 4 ans · Éducation",
+  "hero.teacherChip": "Approuvé par les enseignants",
+  "hero.teacherChipSub": "Conçu pour l'apprentissage précoce",
 
   // TrustBar
   "trust.badge1": "Certifié Confidentialité ESRB",
   "trust.badge2": "Conçu dès 4 ans",
   "trust.badge3": "Disponible en 6 langues",
   "trust.badge4": "Catégorie éducation",
+
+  // Teacher approved
+  "teacher.eyebrow": "Approuvé par les enseignants",
+  "teacher.title": "La confiance des éducateurs et des parents",
+  "teacher.body":
+    "Dora: Explore and Play! s'appuie sur les principes de l'apprentissage précoce et est conçu en pensant aux éducateurs, pour que chaque mini-jeu soutienne de vraies étapes de la maternelle : curiosité, langage, résolution de problèmes et compétences socio-émotionnelles.",
+  "teacher.point1": "Conçu pour soutenir les objectifs d'apprentissage en maternelle",
+  "teacher.point2": "Certifié ESRB Privacy et sûr pour les enfants",
+  "teacher.point3": "Un jeu sans frustration, approuvé pour les petits",
+  "teacher.badge": "Approuvé par les enseignants",
 
   // How it works
   "how.eyebrow": "Comment ça marche",
@@ -731,53 +767,53 @@ const fr: Dict = {
     "Chaque tap est une occasion d'explorer, d'apprendre et de grandir — au cœur de l'univers coloré et bienveillant de Dora.",
   "feature.explore.title": "Explore et découvre",
   "feature.explore.desc":
-    "Pars à l'aventure dans des lieux vibrants et emblématiques — de la Casita de Dora à la Plus Haute Montagne — en éveillant la curiosité et le sens de la résolution de problèmes en chemin.",
+    "Pars à l'aventure dans des lieux vibrants et emblématiques — de la Casita de Dora à la Plus Haute Montagne —, chacun rempli de surprises cachées qui éveillent la curiosité et la résolution de problèmes à chaque étape.",
   "feature.words.title": "Apprends des mots",
   "feature.words.desc":
-    "Des mini-jeux ludiques présentent du vocabulaire et des expressions de base en espagnol, transformant chaque tap en moment d'apprentissage bilingue.",
+    "Des mini-jeux ludiques enseignent les premiers mots et expressions en espagnol, les premiers chiffres, les formes et les couleurs — chaque tap devient un moment d'apprentissage bilingue.",
   "feature.music.title": "Fais de la musique",
   "feature.music.desc":
-    "Tambour, danse et chant ! Les activités musicales permettent aux enfants de s'approprier le rythme et les sons de l'univers coloré de Dora.",
+    "Tambour, danse et chant au rythme et aux sons de l'univers de Dora ! Des activités musicales joyeuses qui font bouger les plus petits.",
   "feature.friends.title": "Aide les amis",
   "feature.friends.desc":
-    "Rejoins Babouche, Tico, Isa et Benny dans leurs missions et développe l'empathie, la gentillesse et l'esprit d'équipe à chaque défi.",
+    "Aide Babouche le singe, Tico l'écureuil, Isa l'iguane et Benny le taureau à surmonter les obstacles, en cultivant gentillesse, esprit d'équipe et vraies compétences socio-émotionnelles.",
   "feature.activities.title": "Activités amusantes",
   "feature.activities.desc":
-    "Formes, couleurs, comptage et jeu créatif occupent les petits esprits avec des défis sans frustration, pensés pour les petites mains.",
+    "Formes, couleurs, comptage et associations de figures éveillent la créativité et occupent les petits esprits — sans frustration et pensés pour les petites mains.",
   "feature.safe.title": "Sûr et adapté aux enfants",
   "feature.safe.desc":
-    "Certifié Confidentialité ESRB et conçu autour des étapes préscolaires, pour que les parents soient sereins pendant que les enfants explorent et apprennent.",
+    "Certifié Confidentialité ESRB et conçu pour soutenir les étapes préscolaires, avec un jeu facile et sans frustration pensé pour les plus jeunes explorateurs — pour que les parents soient sereins.",
 
   // Characters
   "char.eyebrow": "Rencontre les amis",
   "char.title": "Une aventure est plus belle à plusieurs",
   "char.subtitle": "Dis hola à Dora et aux amis avec qui ton enfant va explorer, apprendre et jouer.",
   "char.dora.role": "L'exploratrice",
-  "char.dora.blurb": "Courageuse, curieuse et toujours prête pour la prochaine aventure avec son fidèle Sac à dos et sa Carte.",
+  "char.dora.blurb": "Une petite fille courageuse et curieuse qui mène chaque aventure : suis sa Carte et son Sac à dos pendant que ton enfant aide à choisir le chemin.",
   "char.boots.role": "Son meilleur ami",
-  "char.boots.blurb": "Le petit singe espiègle de Dora, qui adore sauter, grimper et donner un coup de main.",
+  "char.boots.blurb": "Le petit singe espiègle de Dora, qui adore sauter et grimper : les enfants l'encouragent et l'aident à franchir chaque étape.",
   "char.tico.role": "L'écureuil",
-  "char.tico.blurb": "Un petit écureuil rapide et amical qui file partout et parle surtout espagnol.",
+  "char.tico.blurb": "Un écureuil rapide et amical qui parle surtout espagnol : une façon amusante d'apprendre ses premiers mots.",
   "char.isa.role": "L'iguane",
-  "char.isa.blurb": "Une iguane à la main verte qui adore les fleurs, les jardins et résoudre des énigmes en équipe.",
+  "char.isa.blurb": "Une iguane qui adore les fleurs et les jardins : les enfants résolvent avec elle de petites énigmes, côte à côte.",
   "char.benny.role": "Le taureau",
-  "char.benny.blurb": "Un taureau tout doux et au grand cœur, toujours joyeux et prêt à chanter.",
+  "char.benny.blurb": "Un taureau tout doux au grand cœur qui a besoin d'un coup de main : les enfants lui offrent gentillesse et une joyeuse chanson.",
 
   // Age guide
   "age.eyebrow": "Grandit avec votre enfant",
   "age.title": "Un apprentissage pour chaque petite étape",
   "age.subtitle": "Un jeu adapté à l'âge qui accompagne les étapes préscolaires à mesure que votre enfant grandit.",
   "age.stage1.title": "Premières découvertes",
-  "age.stage1.point1": "Taps, glissés et jeu simple de cause à effet",
-  "age.stage1.point2": "Couleurs, formes et premiers mots",
-  "age.stage1.point3": "Exploration douce et sans frustration",
+  "age.stage1.point1": "Premiers taps et glissés avec cause à effet simple",
+  "age.stage1.point2": "Couleurs vives, formes de base et premiers mots",
+  "age.stage1.point3": "Exploration douce et sans frustration pour petites mains",
   "age.stage2.title": "Des compétences qui grandissent",
-  "age.stage2.point1": "Vocabulaire et expressions de base en espagnol",
-  "age.stage2.point2": "Compter, associer et résoudre des problèmes",
-  "age.stage2.point3": "Aider les amis développe l'empathie et l'esprit d'équipe",
+  "age.stage2.point1": "Premiers mots et expressions en espagnol, et le comptage",
+  "age.stage2.point2": "Associer des figures, résoudre des problèmes et trouver le bon chemin",
+  "age.stage2.point3": "Aider les amis de Dora développe l'empathie et l'esprit d'équipe",
   "age.stage3.title": "Des explorateurs confiants",
   "age.stage3.point1": "Des aventures plus longues et des mini-jeux plus riches",
-  "age.stage3.point2": "Activités créatives et création musicale",
+  "age.stage3.point2": "Activités créatives, création musicale et rythme",
   "age.stage3.point3": "Jeu en autonomie et narration d'histoires",
 
   // Gallery
@@ -792,11 +828,11 @@ const fr: Dict = {
 
   // About
   "about.eyebrow": "Donner vie à la série",
-  "about.title": "Plus qu'un jeu — une véritable expérience Dora",
+  "about.title": "Pas seulement un jeu — une expérience Dora immersive",
   "about.body":
-    "Nous avons capturé l'esprit de la série : interactivité, éducation bilingue et âme aventurière. C'est comme entrer dans un épisode, où chaque découverte nourrit la curiosité, la confiance et la gentillesse.",
-  "about.check1": "Conçu pour les tout-petits, la maternelle et les jeunes enfants",
-  "about.check2": "Un jeu sans frustration pensé pour les petites mains",
+    "C'est comme être à l'intérieur d'un épisode : nous avons capturé le cœur de la série, son interactivité, son apprentissage bilingue et son âme aventurière. Chaque découverte nourrit la curiosité et la résolution de problèmes, chaque ami enseigne la gentillesse, et chaque mini-jeu est conçu pour soutenir de vraies étapes de la maternelle.",
+  "about.check1": "Sûr et adapté aux enfants, conçu en pensant à leur sécurité",
+  "about.check2": "Une base éducative conçue pour soutenir les étapes préscolaires",
   "about.check3": "Sceau de confidentialité pour enfants certifié ESRB",
   "about.stat1.label": "ans d'aventures de Dora appréciées dans le monde entier",
   "about.stat2.label": "pays où Dora est diffusée",
@@ -1030,18 +1066,30 @@ const de: Dict = {
   "hero.title2": "spiele mit Dora!",
   "hero.availableIn": "Verfügbar auf",
   "hero.shortPitch":
-    "¡Hola! Begleite Dora und ihre Freunde auf einer magischen Reise voller Entdeckungen, Musik, Wörter und Freundlichkeit — besonders für Kleinkinder und Vorschulkinder gemacht.",
+    "¡Hola! Tauche ein in Doras Welt und entdecke ikonische Orte — von ihrer Casita bis zum höchsten Berg — und lerne dabei erste spanische Wörter, Zählen und Freundlichkeit. Ein immersives, zweisprachiges Abenteuer für Kleinkinder und Vorschulkinder.",
   "hero.ratingLine": "{stars} · {count} Bewertungen im {source}",
   "hero.ratingChip": "{stars} Bewertung",
   "hero.ratingChipSub": "{count} Eltern",
   "hero.freeChip": "Kostenlos spielen",
   "hero.freeChipSub": "Ab 4 Jahren · Bildung",
+  "hero.teacherChip": "Von Pädagogen empfohlen",
+  "hero.teacherChipSub": "Für frühes Lernen gemacht",
 
   // TrustBar
   "trust.badge1": "ESRB-datenschutzzertifiziert",
   "trust.badge2": "Ab 4 Jahren gemacht",
   "trust.badge3": "In 6 Sprachen verfügbar",
   "trust.badge4": "Kategorie Bildung",
+
+  // Teacher approved
+  "teacher.eyebrow": "Von Pädagogen empfohlen",
+  "teacher.title": "Pädagogen und Eltern vertrauen darauf",
+  "teacher.body":
+    "Dora: Explore and Play! basiert auf Prinzipien des frühen Lernens und wurde mit Blick auf Pädagogen gestaltet, sodass jedes Minispiel echte Meilensteine im Vorschulalter fördert — Neugier, Sprache, Problemlösung und sozial-emotionale Fähigkeiten.",
+  "teacher.point1": "Entwickelt zur Förderung von Lernzielen im Vorschulalter",
+  "teacher.point2": "ESRB-Datenschutz-zertifiziert und sicher für Kinder",
+  "teacher.point3": "Frustfreies Spielen, geeignet für kleine Lernende",
+  "teacher.badge": "Von Pädagogen empfohlen",
 
   // How it works
   "how.eyebrow": "So funktioniert's",
@@ -1064,53 +1112,53 @@ const de: Dict = {
     "Jeder Tipp ist eine Chance zu entdecken, zu lernen und zu wachsen — eingebettet in Doras bunte, freundliche Welt.",
   "feature.explore.title": "Entdecken & erforschen",
   "feature.explore.desc":
-    "Erlebe Abenteuer an lebendigen, ikonischen Orten — von Doras Casita bis zum höchsten Berg — und wecke dabei Neugier und Problemlösungsfreude.",
+    "Erlebe Abenteuer an lebendigen, ikonischen Orten — von Doras Casita bis zum höchsten Berg —, jeder voller versteckter Überraschungen, die bei jedem Schritt Neugier und Problemlösungsfreude wecken.",
   "feature.words.title": "Wörter lernen",
   "feature.words.desc":
-    "Verspielte Minispiele führen in einfaches spanisches Vokabular und Redewendungen ein und machen jeden Tipp zu einem zweisprachigen Lernmoment.",
+    "Verspielte Minispiele vermitteln erste spanische Wörter und Redewendungen, einfaches Zählen, Formen und Farben — und machen jeden Tipp zu einem zweisprachigen Lernmoment.",
   "feature.music.title": "Musik machen",
   "feature.music.desc":
-    "Trommeln, tanzen und singen! Musikalische Aktivitäten lassen Kinder den Rhythmus und die Klänge von Doras bunter Welt erleben.",
+    "Trommeln, tanzen und singen im Rhythmus und zu den Klängen von Doras Welt! Fröhliche Musikaktivitäten, die die Kleinsten in Bewegung bringen.",
   "feature.friends.title": "Freunden helfen",
   "feature.friends.desc":
-    "Begleite Boots, Tico, Isa und Benny bei ihren Missionen und entwickle mit jeder Herausforderung Empathie, Freundlichkeit und Teamgeist.",
+    "Hilf Boots dem Äffchen, Tico dem Eichhörnchen, Isa der Leguandame und Benny dem Stier, Hindernisse zu überwinden — und entwickle Freundlichkeit, Teamgeist und echte sozial-emotionale Fähigkeiten.",
   "feature.activities.title": "Spaßige Aktivitäten",
   "feature.activities.desc":
-    "Formen, Farben, Zählen und kreatives Spiel halten kleine Köpfe mit frustfreien Herausforderungen für kleine Hände beschäftigt.",
+    "Formen, Farben, Zählen und Form-Zuordnen wecken die Kreativität und halten kleine Köpfe beschäftigt — frustfrei und für kleine Hände gemacht.",
   "feature.safe.title": "Sicher & kindgerecht",
   "feature.safe.desc":
-    "ESRB-datenschutzzertifiziert und rund um Vorschulmeilensteine gestaltet, damit Eltern entspannen können, während Kinder entdecken und lernen.",
+    "ESRB-datenschutzzertifiziert und darauf ausgelegt, Vorschulmeilensteine zu fördern, mit einfachem, frustfreiem Spiel für die jüngsten Entdecker — damit Eltern entspannen können.",
 
   // Characters
   "char.eyebrow": "Lerne die Freunde kennen",
   "char.title": "Ein Abenteuer ist zusammen schöner",
   "char.subtitle": "Sag hola zu Dora und den Freunden, mit denen dein Kind entdecken, lernen und spielen wird.",
   "char.dora.role": "Die Entdeckerin",
-  "char.dora.blurb": "Mutig, neugierig und immer bereit für das nächste Abenteuer mit ihrem treuen Rucksack und ihrer Karte.",
+  "char.dora.blurb": "Ein mutiges, neugieriges Mädchen, das jedes Abenteuer anführt: Folge ihrer Karte und ihrem Rucksack, während dein Kind den Weg mitwählt.",
   "char.boots.role": "Bester Freund",
-  "char.boots.blurb": "Doras verspielter Äffchen-Kumpel, der gern springt, klettert und mit anpackt.",
+  "char.boots.blurb": "Doras verspieltes Äffchen, das gern springt und klettert: Kinder feuern es an und helfen ihm über jede Hürde.",
   "char.tico.role": "Das Eichhörnchen",
-  "char.tico.blurb": "Ein freundliches, flinkes kleines Eichhörnchen, das überall herumflitzt und meistens Spanisch spricht.",
+  "char.tico.blurb": "Ein flinkes, freundliches Eichhörnchen, das meistens Spanisch spricht: eine spielerische Art, erste Wörter zu lernen.",
   "char.isa.role": "Der Leguan",
-  "char.isa.blurb": "Eine Leguandame mit grünem Daumen, die Blumen, Gärten und gemeinsames Rätsellösen liebt.",
+  "char.isa.blurb": "Eine Leguandame, die Blumen und Gärten liebt: Kinder lösen Seite an Seite mit ihr kleine Rätsel.",
   "char.benny.role": "Der Stier",
-  "char.benny.blurb": "Ein sanftmütiger Stier mit großem Herzen, immer fröhlich und für ein Lied zu haben.",
+  "char.benny.blurb": "Ein sanftmütiger Stier mit großem Herzen, der Hilfe braucht: Kinder schenken ihm Freundlichkeit und ein fröhliches Lied.",
 
   // Age guide
   "age.eyebrow": "Wächst mit deinem Kind",
   "age.title": "Lernen für jede kleine Entwicklungsstufe",
   "age.subtitle": "Altersgerechtes Spiel, das Vorschulmeilensteine begleitet, während dein Kind wächst.",
   "age.stage1.title": "Erste Entdeckungen",
-  "age.stage1.point1": "Tippen, Ziehen und einfaches Ursache-Wirkung-Spiel",
-  "age.stage1.point2": "Farben, Formen und erste Wörter",
-  "age.stage1.point3": "Sanftes, frustfreies Entdecken",
+  "age.stage1.point1": "Erstes Tippen und Ziehen mit einfacher Ursache-Wirkung",
+  "age.stage1.point2": "Leuchtende Farben, einfache Formen und erste Wörter",
+  "age.stage1.point3": "Sanftes, frustfreies Entdecken für kleine Hände",
   "age.stage2.title": "Wachsende Fähigkeiten",
-  "age.stage2.point1": "Einfaches spanisches Vokabular und Redewendungen",
-  "age.stage2.point2": "Zählen, Zuordnen und Problemlösen",
-  "age.stage2.point3": "Freunden helfen stärkt Empathie & Teamgeist",
+  "age.stage2.point1": "Erste spanische Wörter, Sätze und einfaches Zählen",
+  "age.stage2.point2": "Formen zuordnen, Probleme lösen und den besten Weg finden",
+  "age.stage2.point3": "Doras Freunden helfen stärkt Empathie & Teamgeist",
   "age.stage3.title": "Selbstbewusste Entdecker",
   "age.stage3.point1": "Längere Abenteuer und reichhaltigere Minispiele",
-  "age.stage3.point2": "Kreative Aktivitäten und Musizieren",
+  "age.stage3.point2": "Kreative Aktivitäten, Musizieren und Rhythmus",
   "age.stage3.point3": "Eigenständiges Spiel und Geschichtenerzählen",
 
   // Gallery
@@ -1125,11 +1173,11 @@ const de: Dict = {
 
   // About
   "about.eyebrow": "Die Serie zum Leben erwecken",
-  "about.title": "Mehr als ein Spiel — ein echtes Dora-Erlebnis",
+  "about.title": "Nicht nur ein Spiel — ein immersives Dora-Erlebnis",
   "about.body":
-    "Wir haben das Herz der Serie eingefangen: Interaktivität, zweisprachige Bildung und Abenteuergeist. Es ist, als würdest du direkt in eine Folge eintauchen, in der jede Entdeckung Neugier, Selbstvertrauen und Freundlichkeit fördert.",
-  "about.check1": "Für Kleinkinder, Vorschule und jüngere Kinder gestaltet",
-  "about.check2": "Frustfreies Gameplay für kleine Hände",
+    "Es ist, als wärst du mitten in einer Folge: Wir haben das Herz der Serie eingefangen — ihre Interaktivität, ihr zweisprachiges Lernen und ihren Abenteuergeist. Jede Entdeckung fördert Neugier und Problemlösung, jeder Freund lehrt Freundlichkeit, und jedes Minispiel unterstützt echte Vorschulmeilensteine.",
+  "about.check1": "Sicher & kindgerecht, mit Blick auf Kindersicherheit gestaltet",
+  "about.check2": "Pädagogisches Fundament zur Förderung von Vorschulmeilensteinen",
   "about.check3": "ESRB-datenschutzzertifiziertes Kinder-Datenschutzsiegel",
   "about.stat1.label": "Jahre Dora-Abenteuer, weltweit geliebt",
   "about.stat2.label": "Länder, in denen Dora zu sehen ist",
@@ -1363,18 +1411,30 @@ const it: Dict = {
   "hero.title2": "gioca con Dora!",
   "hero.availableIn": "Disponibile in",
   "hero.shortPitch":
-    "¡Hola! Unisciti a Dora e ai suoi amici in un viaggio magico pieno di esplorazione, musica, parole e gentilezza — pensato appositamente per i più piccoli e i bambini in età prescolare.",
+    "¡Hola! Entra nel mondo di Dora ed esplora luoghi iconici — dalla sua Casita alla Montagna più Alta — imparando le prime parole in spagnolo, a contare e la gentilezza lungo il cammino. Un'avventura bilingue e immersiva per i più piccoli e la scuola dell'infanzia.",
   "hero.ratingLine": "{stars} · {count} recensioni sull'{source}",
   "hero.ratingChip": "{stars} di valutazione",
   "hero.ratingChipSub": "{count} genitori",
   "hero.freeChip": "Gratis da giocare",
   "hero.freeChipSub": "Dai 4 anni · Istruzione",
+  "hero.teacherChip": "Approvato dagli educatori",
+  "hero.teacherChipSub": "Creato per l'apprendimento precoce",
 
   // TrustBar
   "trust.badge1": "Certificato Privacy ESRB",
   "trust.badge2": "Pensato dai 4 anni",
   "trust.badge3": "Disponibile in 6 lingue",
   "trust.badge4": "Categoria istruzione",
+
+  // Teacher approved
+  "teacher.eyebrow": "Approvato dagli educatori",
+  "teacher.title": "Scelto da educatori e genitori",
+  "teacher.body":
+    "Dora: Explore and Play! si basa sui principi dell'apprendimento precoce ed è pensato tenendo a mente gli educatori, così ogni mini-gioco sostiene veri traguardi della scuola dell'infanzia: curiosità, linguaggio, problem solving e competenze socio-emotive.",
+  "teacher.point1": "Progettato per sostenere gli obiettivi di apprendimento prescolare",
+  "teacher.point2": "Certificato ESRB Privacy e sicuro per i bambini",
+  "teacher.point3": "Gioco senza frustrazioni, approvato per i piccoli esploratori",
+  "teacher.badge": "Approvato dagli educatori",
 
   // How it works
   "how.eyebrow": "Come funziona",
@@ -1397,53 +1457,53 @@ const it: Dict = {
     "Ogni tocco è un'occasione per esplorare, imparare e crescere — nel mondo colorato e amichevole di Dora.",
   "feature.explore.title": "Esplora e scopri",
   "feature.explore.desc":
-    "Vivi avventure in luoghi vivaci e iconici — dalla Casita di Dora alla Montagna più Alta — stimolando curiosità e capacità di risolvere problemi lungo il cammino.",
+    "Vivi avventure in luoghi vivaci e iconici — dalla Casita di Dora alla Montagna più Alta —, ognuno pieno di sorprese nascoste che stimolano curiosità e capacità di risolvere problemi a ogni passo.",
   "feature.words.title": "Impara le parole",
   "feature.words.desc":
-    "Minigiochi divertenti introducono vocaboli e frasi di base in spagnolo, trasformando ogni tocco in un momento di apprendimento bilingue.",
+    "Minigiochi divertenti insegnano le prime parole e frasi in spagnolo, il conteggio semplice, le forme e i colori, trasformando ogni tocco in un momento di apprendimento bilingue.",
   "feature.music.title": "Fai musica",
   "feature.music.desc":
-    "Tamburi, balli e canti! Le attività musicali permettono ai bambini di immergersi nel ritmo e nei suoni del colorato mondo di Dora.",
+    "Tamburi, balli e canti al ritmo e ai suoni del mondo di Dora! Attività musicali gioiose che fanno muovere i più piccoli.",
   "feature.friends.title": "Aiuta gli amici",
   "feature.friends.desc":
-    "Unisciti a Boots, Tico, Isa e Benny nelle loro missioni e sviluppa empatia, gentilezza e spirito di squadra a ogni sfida.",
+    "Aiuta Boots la scimmietta, Tico lo scoiattolo, Isa l'iguana e Benny il toro a superare gli ostacoli, sviluppando gentilezza, spirito di squadra e vere competenze socio-emotive.",
   "feature.activities.title": "Attività divertenti",
   "feature.activities.desc":
-    "Forme, colori, conteggio e gioco creativo tengono impegnate le piccole menti con sfide senza frustrazioni pensate per le manine.",
+    "Forme, colori, conteggio e abbinamento di figure stimolano la creatività e tengono impegnate le piccole menti — senza frustrazioni e pensate per le manine.",
   "feature.safe.title": "Sicura e a misura di bambino",
   "feature.safe.desc":
-    "Certificata Privacy ESRB e costruita attorno alle tappe prescolari, così i genitori possono stare tranquilli mentre i bambini esplorano e imparano.",
+    "Certificata Privacy ESRB e creata per sostenere le tappe prescolari, con un gioco facile e senza frustrazioni pensato per i più piccoli esploratori — così i genitori possono stare tranquilli.",
 
   // Characters
   "char.eyebrow": "Incontra gli amici",
   "char.title": "Un'avventura è più bella insieme",
   "char.subtitle": "Di' hola a Dora e agli amici con cui il tuo bambino esplorerà, imparerà e giocherà.",
   "char.dora.role": "L'esploratrice",
-  "char.dora.blurb": "Coraggiosa, curiosa e sempre pronta per la prossima avventura con il suo fidato Zaino e la sua Mappa.",
+  "char.dora.blurb": "Una bambina coraggiosa e curiosa che guida ogni avventura: segui la sua Mappa e il suo Zaino mentre il tuo bambino aiuta a scegliere il cammino.",
   "char.boots.role": "Il migliore amico",
-  "char.boots.blurb": "La scimmietta giocherellona di Dora, che adora saltare, arrampicarsi e dare una mano.",
+  "char.boots.blurb": "La scimmietta giocherellona di Dora, che adora saltare e arrampicarsi: i bambini lo incoraggiano e lo aiutano a fare ogni passo.",
   "char.tico.role": "Lo scoiattolo",
-  "char.tico.blurb": "Uno scoiattolino amichevole e veloce che sfreccia ovunque e parla soprattutto spagnolo.",
+  "char.tico.blurb": "Uno scoiattolo veloce e amichevole che parla soprattutto spagnolo: un modo divertente per imparare le prime parole.",
   "char.isa.role": "L'iguana",
-  "char.isa.blurb": "Un'iguana dal pollice verde che adora fiori, giardini e risolvere enigmi insieme.",
+  "char.isa.blurb": "Un'iguana che adora fiori e giardini: i bambini risolvono con lei piccoli enigmi, fianco a fianco.",
   "char.benny.role": "Il toro",
-  "char.benny.blurb": "Un toro dal cuore grande e gentile, sempre allegro e pronto a cantare.",
+  "char.benny.blurb": "Un toro dal cuore grande e gentile che ha bisogno di una mano: i bambini gli regalano gentilezza e una canzone allegra.",
 
   // Age guide
   "age.eyebrow": "Cresce con il tuo bambino",
   "age.title": "Un apprendimento per ogni piccola tappa",
   "age.subtitle": "Un gioco adatto all'età che accompagna le tappe prescolari mentre il tuo bambino cresce.",
   "age.stage1.title": "Prime scoperte",
-  "age.stage1.point1": "Tocchi, trascinamenti e semplice gioco di causa ed effetto",
-  "age.stage1.point2": "Colori, forme e prime parole",
-  "age.stage1.point3": "Esplorazione dolce e senza frustrazioni",
+  "age.stage1.point1": "Primi tocchi e trascinamenti con causa ed effetto semplice",
+  "age.stage1.point2": "Colori vivaci, forme di base e prime parole",
+  "age.stage1.point3": "Esplorazione dolce e senza frustrazioni per le manine",
   "age.stage2.title": "Competenze in crescita",
-  "age.stage2.point1": "Vocaboli e frasi di base in spagnolo",
-  "age.stage2.point2": "Contare, abbinare e risolvere problemi",
-  "age.stage2.point3": "Aiutare gli amici sviluppa empatia e spirito di squadra",
+  "age.stage2.point1": "Prime parole e frasi in spagnolo e il conteggio",
+  "age.stage2.point2": "Abbinare figure, risolvere problemi e trovare il percorso migliore",
+  "age.stage2.point3": "Aiutare gli amici di Dora sviluppa empatia e spirito di squadra",
   "age.stage3.title": "Esploratori sicuri di sé",
   "age.stage3.point1": "Avventure più lunghe e minigiochi più ricchi",
-  "age.stage3.point2": "Attività creative e creazione di musica",
+  "age.stage3.point2": "Attività creative, creazione di musica e ritmo",
   "age.stage3.point3": "Gioco autonomo e narrazione di storie",
 
   // Gallery
@@ -1458,11 +1518,11 @@ const it: Dict = {
 
   // About
   "about.eyebrow": "Dare vita alla serie",
-  "about.title": "Più di un gioco — una vera esperienza Dora",
+  "about.title": "Non solo un gioco — un'esperienza Dora immersiva",
   "about.body":
-    "Abbiamo catturato il cuore della serie: interattività, educazione bilingue e spirito d'avventura. È come entrare dentro un episodio, dove ogni scoperta alimenta curiosità, sicurezza e gentilezza.",
-  "about.check1": "Pensata per i più piccoli, la scuola materna e i bambini più piccoli",
-  "about.check2": "Gioco senza frustrazioni pensato per le manine",
+    "È come essere dentro un episodio: abbiamo catturato il cuore della serie, la sua interattività, il suo apprendimento bilingue e il suo spirito d'avventura. Ogni scoperta alimenta curiosità e capacità di risolvere problemi, ogni amico insegna la gentilezza e ogni minigioco è pensato per sostenere vere tappe della scuola dell'infanzia.",
+  "about.check1": "Sicura e a misura di bambino, progettata pensando alla loro sicurezza",
+  "about.check2": "Base educativa creata per sostenere le tappe prescolari",
   "about.check3": "Sigillo Privacy per bambini certificato ESRB",
   "about.stat1.label": "anni di avventure di Dora amate in tutto il mondo",
   "about.stat2.label": "paesi in cui si vede Dora",
@@ -1696,18 +1756,30 @@ const pt: Dict = {
   "hero.title2": "brinque com a Dora!",
   "hero.availableIn": "Disponível em",
   "hero.shortPitch":
-    "¡Hola! Junte-se à Dora e seus amigos numa jornada mágica cheia de exploração, música, palavras e gentileza — feita especialmente para bebês e crianças em idade pré-escolar.",
+    "¡Hola! Entre no mundo da Dora e explore lugares icônicos — da Casita dela à Montanha mais Alta — aprendendo as primeiras palavras em espanhol, a contar e gentileza pelo caminho. Uma aventura bilíngue e imersiva para bebês e crianças em idade pré-escolar.",
   "hero.ratingLine": "{stars} · {count} avaliações na {source}",
   "hero.ratingChip": "{stars} de avaliação",
   "hero.ratingChipSub": "{count} famílias",
   "hero.freeChip": "Grátis para jogar",
   "hero.freeChipSub": "A partir de 4 anos · Educação",
+  "hero.teacherChip": "Aprovado por educadores",
+  "hero.teacherChipSub": "Feito para a aprendizagem inicial",
 
   // TrustBar
   "trust.badge1": "Certificado de Privacidade ESRB",
   "trust.badge2": "Feito a partir de 4 anos",
   "trust.badge3": "Disponível em 6 idiomas",
   "trust.badge4": "Categoria educação",
+
+  // Teacher approved
+  "teacher.eyebrow": "Aprovado por educadores",
+  "teacher.title": "A confiança de educadores e famílias",
+  "teacher.body":
+    "Dora: Explore and Play! é baseado em princípios de aprendizagem na primeira infância e pensado tendo os educadores em mente, para que cada minijogo apoie marcos reais da pré-escola — curiosidade, linguagem, resolução de problemas e habilidades socioemocionais.",
+  "teacher.point1": "Criado para apoiar os objetivos de aprendizagem pré-escolar",
+  "teacher.point2": "Certificado de privacidade ESRB e seguro para crianças",
+  "teacher.point3": "Jogo sem frustrações, aprovado para pequenos exploradores",
+  "teacher.badge": "Aprovado por educadores",
 
   // How it works
   "how.eyebrow": "Como funciona",
@@ -1730,53 +1802,53 @@ const pt: Dict = {
     "Cada toque é uma chance de explorar, aprender e crescer — dentro do mundo colorido e acolhedor da Dora.",
   "feature.explore.title": "Explore e descubra",
   "feature.explore.desc":
-    "Viva aventuras por lugares vibrantes e icônicos — da Casita da Dora à Montanha mais Alta — despertando curiosidade e resolução de problemas pelo caminho.",
+    "Viva aventuras por lugares vibrantes e icônicos — da Casita da Dora à Montanha mais Alta —, cada um cheio de surpresas escondidas que despertam curiosidade e resolução de problemas a cada passo.",
   "feature.words.title": "Aprenda palavras",
   "feature.words.desc":
-    "Minijogos divertidos apresentam vocabulário e frases básicas em espanhol, transformando cada toque num momento de aprendizado bilíngue.",
+    "Minijogos divertidos ensinam as primeiras palavras e frases em espanhol, contagem simples, formas e cores, transformando cada toque num momento de aprendizado bilíngue.",
   "feature.music.title": "Faça música",
   "feature.music.desc":
-    "Tocar tambor, dançar e cantar! As atividades musicais permitem que as crianças explorem o ritmo e os sons do mundo colorido da Dora.",
+    "Tocar tambor, dançar e cantar no ritmo e nos sons do mundo da Dora! Atividades musicais alegres que colocam os pequenos em movimento.",
   "feature.friends.title": "Ajude os amigos",
   "feature.friends.desc":
-    "Junte-se a Botas, Tico, Isa e Benny em suas missões e desenvolva empatia, gentileza e trabalho em equipe a cada desafio.",
+    "Ajude o Botas o macaco, o Tico o esquilo, a Isa a iguana e o Benny o touro a superar obstáculos, desenvolvendo gentileza, trabalho em equipe e verdadeiras habilidades socioemocionais.",
   "feature.activities.title": "Atividades divertidas",
   "feature.activities.desc":
-    "Formas, cores, contagem e brincadeira criativa mantêm as mentes pequenas ocupadas com desafios sem frustração, feitos para mãozinhas.",
+    "Formas, cores, contagem e combinação de figuras despertam a criatividade e mantêm as mentes pequenas ocupadas — sem frustração e feitos para mãozinhas.",
   "feature.safe.title": "Seguro e adequado para crianças",
   "feature.safe.desc":
-    "Com Certificado de Privacidade ESRB e construído em torno dos marcos pré-escolares, para que os pais fiquem tranquilos enquanto as crianças exploram e aprendem.",
+    "Com Certificado de Privacidade ESRB e criado para apoiar os marcos pré-escolares, com um jogo fácil e sem frustração pensado para os menores exploradores — para que os pais fiquem tranquilos.",
 
   // Characters
   "char.eyebrow": "Conheça os amigos",
   "char.title": "Uma aventura é melhor em grupo",
   "char.subtitle": "Diga hola para a Dora e os amigos com quem seu filho vai explorar, aprender e brincar.",
   "char.dora.role": "A exploradora",
-  "char.dora.blurb": "Corajosa, curiosa e sempre pronta para a próxima aventura com sua fiel Mochila e seu Mapa.",
+  "char.dora.blurb": "Uma menina corajosa e curiosa que lidera cada aventura: siga o Mapa e a Mochila dela enquanto seu filho ajuda a escolher o caminho.",
   "char.boots.role": "Melhor amigo",
-  "char.boots.blurb": "O macaquinho brincalhão da Dora, que adora pular, escalar e dar uma mãozinha.",
+  "char.boots.blurb": "O macaquinho brincalhão da Dora, que adora pular e escalar: as crianças o incentivam e o ajudam a dar cada passo.",
   "char.tico.role": "O esquilo",
-  "char.tico.blurb": "Um esquilinho amigável e veloz que corre por toda parte e fala principalmente espanhol.",
+  "char.tico.blurb": "Um esquilo veloz e amigável que fala principalmente espanhol: um jeito divertido de aprender as primeiras palavras.",
   "char.isa.role": "A iguana",
-  "char.isa.blurb": "Uma iguana com mãos de jardineira que adora flores, jardins e resolver quebra-cabeças em conjunto.",
+  "char.isa.blurb": "Uma iguana que adora flores e jardins: as crianças resolvem com ela pequenos quebra-cabeças, lado a lado.",
   "char.benny.role": "O touro",
-  "char.benny.blurb": "Um touro gentil e de bom coração, sempre alegre e pronto para cantar.",
+  "char.benny.blurb": "Um touro gentil e de bom coração que precisa de uma mãozinha: as crianças oferecem gentileza e uma canção alegre.",
 
   // Age guide
   "age.eyebrow": "Cresce com o seu filho",
   "age.title": "Aprendizado para cada pequena fase",
   "age.subtitle": "Brincadeira adequada à idade que acompanha os marcos pré-escolares à medida que seu filho cresce.",
   "age.stage1.title": "Primeiras descobertas",
-  "age.stage1.point1": "Toques, arrastos e brincadeira simples de causa e efeito",
-  "age.stage1.point2": "Cores, formas e primeiras palavras",
-  "age.stage1.point3": "Exploração suave e sem frustração",
+  "age.stage1.point1": "Primeiros toques e arrastos com causa e efeito simples",
+  "age.stage1.point2": "Cores vivas, formas básicas e primeiras palavras",
+  "age.stage1.point3": "Exploração suave e sem frustração para mãozinhas",
   "age.stage2.title": "Habilidades em crescimento",
-  "age.stage2.point1": "Vocabulário e frases básicas em espanhol",
-  "age.stage2.point2": "Contar, combinar e resolver problemas",
-  "age.stage2.point3": "Ajudar os amigos desenvolve empatia e trabalho em equipe",
+  "age.stage2.point1": "Primeiras palavras e frases em espanhol e a contagem",
+  "age.stage2.point2": "Combinar figuras, resolver problemas e achar o melhor caminho",
+  "age.stage2.point3": "Ajudar os amigos da Dora desenvolve empatia e trabalho em equipe",
   "age.stage3.title": "Exploradores confiantes",
   "age.stage3.point1": "Aventuras mais longas e minijogos mais ricos",
-  "age.stage3.point2": "Atividades criativas e criação de música",
+  "age.stage3.point2": "Atividades criativas, criação de música e ritmo",
   "age.stage3.point3": "Brincadeira independente e contação de histórias",
 
   // Gallery
@@ -1791,11 +1863,11 @@ const pt: Dict = {
 
   // About
   "about.eyebrow": "Dando vida à série",
-  "about.title": "Mais que um jogo — uma verdadeira experiência Dora",
+  "about.title": "Não é só um jogo — uma experiência Dora imersiva",
   "about.body":
-    "Capturamos o coração da série: interatividade, educação bilíngue e espírito aventureiro. É como entrar dentro de um episódio, onde cada descoberta cultiva curiosidade, confiança e gentileza.",
-  "about.check1": "Feito para bebês, pré-escola e crianças pequenas",
-  "about.check2": "Jogo sem frustração feito para mãozinhas",
+    "É como estar dentro de um episódio: capturamos o coração da série, sua interatividade, seu aprendizado bilíngue e seu espírito aventureiro. Cada descoberta cultiva curiosidade e resolução de problemas, cada amigo ensina gentileza, e cada minijogo foi feito para apoiar marcos reais da pré-escola.",
+  "about.check1": "Seguro e adequado para crianças, pensado para a segurança delas",
+  "about.check2": "Base educativa criada para apoiar os marcos pré-escolares",
   "about.check3": "Selo de Privacidade Infantil Certificado pela ESRB",
   "about.stat1.label": "anos de aventuras da Dora queridas no mundo todo",
   "about.stat2.label": "países onde a Dora é vista",

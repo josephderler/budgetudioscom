@@ -7,6 +7,7 @@ import AgeGuide from "@/sections/AgeGuide";
 import Gallery from "@/sections/Gallery";
 import VideoSection from "@/sections/VideoSection";
 import About from "@/sections/About";
+import TeacherApproved from "@/sections/TeacherApproved";
 import Comparison from "@/sections/Comparison";
 import Testimonials from "@/sections/Testimonials";
 import Faq from "@/sections/Faq";
@@ -24,6 +25,7 @@ export default function Home() {
       <Gallery />
       <VideoSection />
       <About />
+      <TeacherApproved />
       <Comparison />
       <Testimonials />
       <Faq />
