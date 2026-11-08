@@ -11,4 +11,26 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Split large third-party libs into their own cacheable chunks so the
+        // entry chunk stays small and vendors are reused across visits.
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("@phosphor-icons")) return "icons";
+            if (id.includes("framer-motion")) return "motion";
+            if (
+              id.includes("react-router") ||
+              id.includes("react-dom") ||
+              /node_modules[\\/]react[\\/]/.test(id) ||
+              id.includes("scheduler")
+            ) {
+              return "react-vendor";
+            }
+          }
+        },
+      },
+    },
+  },
 });

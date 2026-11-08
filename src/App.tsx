@@ -1,15 +1,17 @@
-import { useEffect, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ConsentBanner from "@/components/ConsentBanner";
+// Home stays eager so first paint of "/" never waits on a dynamic chunk.
 import Home from "@/pages/Home";
-import Privacy from "@/pages/Privacy";
-import Terms from "@/pages/Terms";
-import Contact from "@/pages/Contact";
-import NotFound from "@/pages/NotFound";
+// Non-home routes are code-split: their JS loads only when navigated to.
+const Privacy = lazy(() => import("@/pages/Privacy"));
+const Terms = lazy(() => import("@/pages/Terms"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 // Scrolls to #hash targets (and to top on plain route changes).
 function ScrollManager() {
@@ -45,13 +47,15 @@ function AnimatedRoutes() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Page><Home /></Page>} />
-        <Route path="/privacy" element={<Page><Privacy /></Page>} />
-        <Route path="/terms" element={<Page><Terms /></Page>} />
-        <Route path="/contact" element={<Page><Contact /></Page>} />
-        <Route path="*" element={<Page><NotFound /></Page>} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Page><Home /></Page>} />
+          <Route path="/privacy" element={<Page><Privacy /></Page>} />
+          <Route path="/terms" element={<Page><Terms /></Page>} />
+          <Route path="/contact" element={<Page><Contact /></Page>} />
+          <Route path="*" element={<Page><NotFound /></Page>} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }
